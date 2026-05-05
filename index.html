@@ -1,126 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>MINDSHARE | Command Center</title>
-    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
-    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @keyframes scanline { 0% { bottom: 100%; } 80% { bottom: 100%; } 100% { bottom: 0%; } }
-        .scanline { position: absolute; width: 100%; height: 2px; background: rgba(16, 185, 129, 0.1); animation: scanline 6s linear infinite; }
-        body { background-color: #000; overflow-x: hidden; }
-    </style>
-</head>
-<body>
-    <div id="root"></div>
-    <script type="text/babel">
-        const { useState, useEffect } = React;
+# 🧠 MINDSHARE: The Generative Action Market
 
-        const MindshareOS = () => {
-            const [logs, setLogs] = useState(["[SYS] Initializing MINDSHARE_OS...", "[SYS] Connecting to Global Neural Grid...", "[SYS] Welcome, Architect."]);
-            
-            // Simulation of live agent activity
-            useEffect(() => {
-                const activities = [
-                    "[SWARM_ALFA] Analyzing TikTok trends for #IndieRevival...",
-                    "[ORACLE] Payout triggered: 450 $MIND to Mission #882",
-                    "[SWARM_BETA] Negotiating server costs with decentralized providers...",
-                    "[SYS] New Mission Created: 'Clean the Pacific' (Funded: $1.2M)",
-                    "[AGENT_7] Sentiment analysis complete. Success probability: 84%"
-                ];
-                const interval = setInterval(() => {
-                    setLogs(prev => [...prev.slice(-10), activities[Math.floor(Math.random() * activities.length)]]);
-                }, 3000);
-                return () => clearInterval(interval);
-            }, []);
+> "Don't bet on the future. Program it."
 
-            return (
-                <div className="min-h-screen text-emerald-500 font-mono p-6 relative">
-                    <div className="scanline"></div>
-                    
-                    {/* Header */}
-                    <nav className="flex justify-between items-center border-b border-emerald-900 pb-4 mb-8">
-                        <div>
-                            <h1 className="text-2xl font-black tracking-tighter text-white">MINDSHARE_OS <span className="text-emerald-500 text-sm">v1.0.4-ALPHA</span></h1>
-                        </div>
-                        <div className="flex gap-8 text-xs">
-                            <div className="flex flex-col items-end">
-                                <span className="opacity-50 underline">ACTIVE_AGENTS</span>
-                                <span className="text-white font-bold">1,248,392</span>
-                            </div>
-                            <div className="flex flex-col items-end">
-                                <span className="opacity-50 underline">MARKET_CAP</span>
-                                <span className="text-white font-bold">$1.42B</span>
-                            </div>
-                        </div>
-                    </nav>
+MINDSHARE is the world's first platform where users don't just predict outcomes—they manufacture them using AI Swarms. We are moving from the **Information Age** to the **Agency Age.**
 
-                    {/* Main Layout */}
-                    <div className="grid grid-cols-12 gap-6">
-                        
-                        {/* Left: Mission Board */}
-                        <div className="col-span-12 md:col-span-8 border border-emerald-900 bg-emerald-950/10 p-6 rounded-lg">
-                            <h2 className="text-white font-bold mb-4 flex items-center gap-2">
-                                <span className="w-2 h-2 bg-red-500 rounded-full animate-ping"></span> 
-                                ACTIVE_MISSIONS
-                            </h2>
-                            <div className="space-y-4">
-                                <div className="border border-emerald-900/50 p-4 hover:bg-emerald-500/5 transition-colors cursor-pointer group">
-                                    <div className="flex justify-between mb-2">
-                                        <span className="text-white font-bold group-hover:text-emerald-400">#001 - THE SPOTIFY TAKEOVER</span>
-                                        <span className="text-xs border border-emerald-500 px-2 uppercase">Viral_Campaign</span>
-                                    </div>
-                                    <p className="text-xs opacity-70 mb-4">Goal: Deploy 10k agents to push indie artist 'LEO' into Global Top 50.</p>
-                                    <div className="w-full bg-emerald-900/30 h-1">
-                                        <div className="bg-emerald-500 h-full w-[65%]"></div>
-                                    </div>
-                                </div>
+## 🚀 Live Alpha
+**Check out the Command Center:** [https://mindshare-coral.vercel.app](https://mindshare-coral.vercel.app)
 
-                                <div className="border border-emerald-900/50 p-4 hover:bg-emerald-500/5 transition-colors cursor-pointer">
-                                    <div className="flex justify-between mb-2">
-                                        <span className="text-white font-bold">#002 - CARBON_SWEEP_INITIATIVE</span>
-                                        <span className="text-xs border border-emerald-500 px-2 uppercase">Physical_Action</span>
-                                    </div>
-                                    <p className="text-xs opacity-70 mb-4">Goal: Coordinate 500 autonomous drones for ocean plastic retrieval.</p>
-                                    <div className="w-full bg-emerald-900/30 h-1">
-                                        <div className="bg-emerald-500 h-full w-[12%]"></div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+---
 
-                        {/* Right: Live Feed */}
-                        <div className="col-span-12 md:col-span-4 flex flex-col gap-6">
-                            <div className="border border-emerald-900 bg-black p-4 rounded-lg h-[400px] flex flex-col justify-between">
-                                <h2 className="text-xs opacity-50 mb-2 underline">NEURAL_SWARM_LOG</h2>
-                                <div className="text-[10px] space-y-2 overflow-hidden flex-1 flex flex-col justify-end">
-                                    {logs.map((log, i) => (
-                                        <div key={i} className="opacity-80">
-                                            {log}
-                                        </div>
-                                    ))}
-                                </div>
-                            </div>
+## 💰 $MIND Tokenomics
+$MIND is the utility token that fuels the ecosystem. It is designed to create a deflationary loop where growth increases token value.
 
-                            <button className="bg-emerald-500 text-black font-black py-4 hover:bg-emerald-400 transition-all shadow-[0_0_20px_rgba(16,185,129,0.3)]">
-                                INITIALIZE_NEW_MISSION
-                            </button>
-                        </div>
-                    </div>
+### 1. The "Fuel" (Utility)
+* **Compute Gas:** To deploy a swarm, users must stake $MIND to cover decentralized compute costs.
+* **Bounties:** All Mission rewards are paid out in $MIND, creating constant market demand.
 
-                    <footer className="mt-12 text-[10px] opacity-30 flex justify-between">
-                        <span>ESTABLISHING_QUORUM... OK</span>
-                        <span>LATENCY: 12ms</span>
-                        <span>NODES_ONLINE: 84,201</span>
-                    </footer>
-                </div>
-            );
-        };
+### 2. The "Burn" (Scarcity)
+* **Success Burn:** 1% of every mission's success fee is permanently "burned" (destroyed), reducing total supply.
+* **Velocity Reward:** Long-term stakers receive "Intelligence Upgrades" for their agents.
 
-        const root = ReactDOM.createRoot(document.getElementById('root'));
-        root.render(<MindshareOS />);
-    </script>
-</body>
-</html>
+
+
+---
+
+## 🛠 Project Roadmap
+- [x] Phase 1: Command Center UI (Vercel)
+- [ ] Phase 2: Agentic Orchestration Layer (Python/LangGraph)
+- [ ] Phase 3: $MIND Smart Contract Deployment (Solana)
+- [ ] Phase 4: First "Global Mission" Launch
+
+## 👥 Core Team
+- **Founder:** bloriner
+- **Lead Architect:** Gershy (Invite Sent)
+
+---
+*MINDSHARE_OS v1.0 - The future is programmable.*
