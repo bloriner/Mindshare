@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MINDSHARE Alpha</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <div id="root"></div>
+    <script type="text/babel">
+        // Paste the MINDSHARE code I gave you right here:
+        const MindshareApp = () => {
+            return (
+                <div className="min-h-screen bg-black text-emerald-400 font-mono p-8">
+                    <h1 className="text-5xl font-bold text-white">DON'T BET ON THE FUTURE. PROGRAM IT.</h1>
+                    <p className="mt-4 opacity-70">MINDSHARE_OS v1.0 is online.</p>
+                </div>
+            );
+        };
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(<MindshareApp />);
+    </script>
+</body>
+</html>
